@@ -1,0 +1,29 @@
+.card-body1{
+    background-color: rgb(212, 238, 238);
+}
+.card-body2{
+    background-color: rgb(212, 238, 238);
+}
+.card-body3{
+    background-color: rgb(212, 238, 238);
+} 
+.fondo{
+    background-color: rgb(207, 171, 207);
+}
+.oferta{
+    color: rgb(255, 255, 255);
+}
+.Productos{
+    color: aliceblue;
+}
+
+*{
+    text-align: center;
+    background-color: yellow;
+}
+
+.card{
+    max-width:auto;
+    max-height: auto;
+    object-fit: auto;
+}

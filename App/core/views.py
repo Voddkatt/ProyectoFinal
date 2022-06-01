@@ -4,12 +4,15 @@ from django.shortcuts import render
 
 def index(request):
 
-
     datos = {
         'nombre': 'SuperAdmin', 
         'numero':[1,2,3]
     }
 
     return render(request,'core/home.html',datos)
+
+def formulario(request):
+
+    return render(request,'core/Formularios/Registro.html')
 
     
