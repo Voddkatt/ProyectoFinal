@@ -15,4 +15,10 @@ def formulario(request):
 
     return render(request,'core/Formularios/Registro.html')
 
-    
+def login(request):
+
+    return render(request, 'core/Formularios/Login.html')
+
+def suscripcion(request):
+
+    return render(request, 'core/Formularios/Suscripcion.html')

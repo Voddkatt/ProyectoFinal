@@ -5,46 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Login</title>
     {%load static%}
-    <link type='text/css' rel="stylesheet" href="{%static 'core/css/Formularios/registro.css'%}"/>
-    <script type='text/javascript' src="{%static 'core/js/Formularios/registro.js'%}"></script>
+    <link type="text/css" rel="stylesheet" href="{% static 'core/css/Formularios/login.css'%}">
+    <script type="text/javascript" src="{%static 'core/js/Formularios/login.js'%}"></script>
 
 </head>
 
 <body>
     <!-- #Formulario para iniciar sesión-->
     <section class="forma">
-        <!--#Los datos a ingresar-->
         <form action="" method="post" id="form">
-
             <div class="form">
-                <h3>Registro</h3>
+                <h3>Iniciar sesión</h3>
+                <!--#Los datos a ingresar-->
                 <div class="group">
-                    <label for="">Nombre</label>
-                    <input class="datos" type="text" name="" id="name" placeholder="Ingrese su Nombre">
-                </div>
-                <div class="group">
-                    <label for="">Apellidos</label>
-                    <input class="datos" type="text" name="" id="apellido" placeholder="Ingrese sus Apellidos">
-                </div>
-                <div class="group">
-                    <label for="">Email</label>
-                    <input class="datos" type="email" name="" id="email" placeholder="Ingrese su Correo">
+                    <label for="">Correo</label>
+                    <input class="datos" type="email" name="" id="email" placeholder="Ingrese su correo">
                 </div>
                 <div class="group">
                     <label for="">Contraseña</label>
-                    <input class="datos" type="password" name="" id="password" placeholder="Ingrese su Contraseña">
+                <input class="datos" type="password" name="" id="password" placeholder="Ingrese su contraseña">
                 </div>
-
-
-                <button type="submit">Registrarse</button>
-                <p class="warnings" id="warnings"></p>
-
+                
+                <button type="submit">Ingresar</button>
+                    <p class="warnings" id="warnings"></p>
                 <!-- #Links de recuperación de contraseña y de registro-->
-                <p><a href="{%url 'log'%}">¿Ya tienes una cuenta registrada? ¡Inicia Sesión!</a></p>
+                <h5><a href="{%url 'form'%}">¿No tienes una cuenta? ¡Registrate!</a></h5>
+            </div>
         </form>
-        </div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
