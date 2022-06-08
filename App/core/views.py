@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Productos
 
 # Create your views here.
 
@@ -9,7 +10,7 @@ def index(request):
         'numero':[1,2,3]
     }
 
-    return render(request,'core/home.html',datos)
+    return render(request,'core/home.html', datos)
 
 def formulario(request):
 
@@ -22,3 +23,14 @@ def login(request):
 def suscripcion(request):
 
     return render(request, 'core/Formularios/Suscripcion.html')
+
+def productos(request):
+    productos= Productos.objects.all()
+    datos = {
+        'productos': productos
+    }
+    return render(request, 'core/productos.html')
+
+def form_productos(request):
+    
+    return render(request, 'core/form_productos.html')
