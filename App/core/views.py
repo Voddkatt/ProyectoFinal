@@ -25,35 +25,40 @@ def suscripcion(request):
 
     return render(request, 'core/Formularios/Suscripcion.html')
 
-def productos(request):
-    productos= Productos.objects.all()
+def clientes(request):
+    clientes= Clientes.objects.all()
     datos = {
-        'productos': productos
+        'clientes': clientes
     }
-    return render(request, 'core/productos.html',datos)
+    return render(request, 'core/clientes.html',datos)
 
-def form_productos(request):
+def form_clientes(request):
     
     datos = {
-        'form': ProductosForm()
+        'form': ClientesForm()
     }
     if request.method== 'POST':
-        formulario = ProductosForm(request.POST)
+        formulario = ClientesForm(request.POST)
         if formulario.is_valid:
             formulario.save()
             datos['mensaje'] = 'Guardados correctamente'
 
-    return render(request, 'core/form_productos.html', datos)
+    return render(request, 'core/form_clientes.html', datos)
 
-def form_mod_productos(request, id):
-    productos = Productos.objects.get(producto=id)
+def form_mod_clientes(request, id):
+    clientes = Clientes.objects.get(cliente=id)
     datos = {
-        'form': ProductosForm(instance=productos)
+        'form': ClientesForm(instance=clientes)
     }
 
-    return render(request, 'core/form_mod_productos.html', datos)
+    return render(request, 'core/form_mod_clientes.html', datos)
 
-def form_del_productos(request, id):
-    productos = Productos.objects.get(producto=id)
-    productos.delete()
-    return redirect(to="productos")
+def form_del_clientes(request, id):
+    clientes = Clientes.objects.get(cliente=id)
+    clientes.delete()
+    return redirect(to="clientes")
+
+def localizacion(request):
+
+    return render(request, 'core/localizacion.html')
+    

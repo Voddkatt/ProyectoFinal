@@ -12,7 +12,7 @@
 
 <body>
     <div class="row">
-        <h1>Modificar productos</h1>
+        <h1>Modificar cliente</h1>
     </div>
     <div class="row">
         <form method="post" action="" id="formulario">
@@ -21,12 +21,12 @@
                 {{ form.as_table }}
             </div>
 
-            <input type="submit" class="btn btn-danger" id="enviar" value="Modificar">
-            <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+            <input type="submit" class="btn btn-primary" id="enviar" value="Modificar">
+            <input type="reset" class="btn btn-danger" id="limpiar" value="Limpiar">
             <div id="error" class="alert alert-danger" role="alert"></div>
         </form>
         <div class="alert alert-success" role="alert">
-            {{mensaje}
+            {{mensaje}}
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"

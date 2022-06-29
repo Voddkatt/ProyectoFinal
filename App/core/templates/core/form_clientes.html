@@ -15,11 +15,11 @@
         <form method="post" action="" id="formulario">
             {% csrf_token %}
             <div class="form-group">
-                {{ form.as_table}}
+                {{ form.as_table }}
             </div>
 
-            <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
-            <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+            <input type="submit" class="btn btn-primary" id="enviar" value="Enviar">
+            <input type="reset" class="btn btn-danger" id="limpiar" value="Limpiar">
             <div id="error" class="alert alert-danger" role="alert"></div>
 
         </form>

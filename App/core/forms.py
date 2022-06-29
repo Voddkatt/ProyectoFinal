@@ -1,9 +1,9 @@
 from django import forms 
 from django.forms import ModelForm
-from .models import Productos
+from .models import Clientes
 
-class ProductosForm(ModelForm):
+class ClientesForm(ModelForm):
 
     class Meta: 
-        model = Productos 
-        fields =['producto','flor','fertilizador','arbusto','maceta', 'categoria']
+        model = Clientes
+        fields =['cliente','usuario','producto','promociones','descuentos', 'categoria']
